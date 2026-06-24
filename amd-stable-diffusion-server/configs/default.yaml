@@ -1,0 +1,21 @@
+# amd-stable-diffusion-server configuration
+
+model:
+  name: "default"
+  checkpoint: null
+
+training:
+  batch_size: 32
+  learning_rate: 1e-4
+  epochs: 100
+  mixed_precision: true
+  gradient_checkpointing: true
+
+data:
+  train_path: "data/train"
+  val_path: "data/val"
+
+hardware:
+  gpus: 1
+  num_workers: 4
+  pin_memory: true
